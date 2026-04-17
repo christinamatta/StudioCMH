@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Studio CMH Interior Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo"><strong>Studio</strong> <span>CMH</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ABOUT HERO -->
+  <div class="about-hero">
+    <div class="about-text-block fade-in">
+      <div class="section-label">About</div>
+      <h1>Studio<br><em>CMH</em></h1>
+      <p>Studio CMH is an interior designer firm based in New York City, specializing in high-end residential and luxury development. Offering full-suite design service, from concept through design development to completion.</p>
+      <p>With a refined, detail-driven approach, each project is guided by a thoughtful and collaborative design process.</p>
+      <p>The result is work that is elegant and timeless — creating spaces that feel tailored, polished, yet deeply personal.</p>
+      <a href="contact.html" class="link-arrow" style="margin-top:1rem; display:inline-flex;">Get in touch</a>
+    </div>
+    <div class="about-portrait fade-in" data-delay="200">
+      <img src="images/crops/materials_01.jpg" alt="CMH" style="width:100%; max-width:420px; height:540px; object-fit:cover; object-position: center top;">
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- PHILOSOPHY -->
+  <div class="about-philosophy fade-in">
+    <div class="about-philosophy-label">Design Philosophy</div>
+    <blockquote class="about-philosophy-text">
+      "Each project begins with listening — to the client, to the space. What emerges is always singular: a space that carries the mark of its inhabitants, refined through a process of reiteration."
+    </blockquote>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- SERVICES -->
+  <section class="section fade-in">
+    <div class="section-label">Services</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; margin-top: 1rem;">
+
+      <div>
+        <h3 style="font-size:1.2rem; color:var(--charcoal); margin-bottom:1rem; font-weight:400;">Residential Design</h3>
+        <p>Full-service interior design for private residences — from space planning and material specification to furniture selection and final styling.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1.2rem; color:var(--charcoal); margin-bottom:1rem; font-weight:400;">Luxury Development</h3>
+        <p>Design of model units, amenity spaces, lobbies, and common areas for high-end residential and mixed-use developments. Translating developer vision into compelling, market-ready interiors.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1.2rem; color:var(--charcoal); margin-bottom:1rem; font-weight:400;">Design Consultation</h3>
+        <p>Design direction and advisory for clients who require expert guidance on material palettes, spatial planning, or concept development at any stage of a project.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- CONTACT INFO -->
+  <section class="section fade-in" style="padding-bottom: var(--spacing-xl);">
+    <div class="section-label">Contact</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items:start;">
+      <div>
+        <h2 style="font-size: clamp(2rem, 3vw, 3rem); margin-bottom:2rem; color:var(--charcoal);">Let's work<br><em>together.</em></h2>
+        <p style="margin-bottom:2.5rem;">Available for new residential projects and developments in New York and beyond.</p>
+        <a href="contact.html" class="link-arrow">Enquire now</a>
+      </div>
+      <div>
+        <div class="project-meta-item" style="margin-bottom:2rem;">
+          <div class="project-meta-label">Email</div>
+          <a href="mailto:christinamatta@outlook.com" class="project-meta-value" style="color:var(--ink); transition:color 0.25s;"
+             onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--ink)'">
+            christinamatta@outlook.com
+          </a>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Phone</div>
+          <a href="tel:+19177751782" class="project-meta-value" style="color:var(--ink); transition:color 0.25s;"
+             onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--ink)'">
+            +1 (917) 775 1782
+          </a>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Location</div>
+          <span class="project-meta-value">New York City, NY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Studio CMH</div>
+    <div class="footer-legal">Selected work completed while at previous firms.</div>
+    <div class="footer-links">
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <style>
+    @media (max-width: 768px) {
+      .section > div[style*="grid-template-columns: repeat(3"] {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+      }
+      .section > div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</body>
+</html>

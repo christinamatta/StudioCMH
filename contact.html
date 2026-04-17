@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Studio CMH Interior Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo"><strong>Studio</strong> <span>CMH</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="contact-layout" style="margin-top: var(--nav-height);">
+    <div class="contact-left">
+      <div>
+        <div class="section-label" style="color:rgba(255,255,255,0.3);">Contact</div>
+        <h1>Let's create something <em>exceptional</em>.</h1>
+        <p>Available for residential and development projects. Enquiries for new work welcome.</p>
+      </div>
+
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <a href="mailto:christinamatta@outlook.com">christinamatta@outlook.com</a>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Phone</div>
+          <a href="tel:+19177751782">+1 (917) 775 1782</a>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Location</div>
+          <span>New York City, NY</span>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; margin-top:2rem;">
+        <p style="font-size:0.65rem; letter-spacing:0.04em; color:rgba(255,255,255,0.25); line-height:1.7;">
+          Selected work completed while at previous firms.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div class="contact-form-title">Send a message</div>
+
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="name">Your Name</label>
+          <input class="form-input" type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="project">Project Type</label>
+          <input class="form-input" type="text" id="project" name="project" placeholder="e.g. Private Residence, Development">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Enquiry →</button>
+      </form>
+
+      <div id="form-success" style="display:none; margin-top:2rem; padding:1.5rem; background:var(--charcoal); color:#fff;">
+        <p style="font-size:0.8rem; letter-spacing:0.05em; color:#fff; margin:0;">Thank you — your message has been received. We will be in touch shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.style.opacity = '0.3';
+      e.target.style.pointerEvents = 'none';
+    }
+  </script>
+</body>
+</html>
