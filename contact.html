@@ -57,7 +57,7 @@
     <div class="contact-right">
       <div class="contact-form-title">Send a message</div>
 
-      <form onsubmit="handleSubmit(event)">
+      <form action="https://formspree.io/f/xnjwjynr" method="POST">
         <div class="form-group">
           <label class="form-label" for="name">Your Name</label>
           <input class="form-input" type="text" id="name" name="name" autocomplete="name" required>
@@ -74,6 +74,8 @@
           <label class="form-label" for="message">Message</label>
           <textarea class="form-textarea" id="message" name="message" rows="4" required></textarea>
         </div>
+        <input type="hidden" name="_subject" value="New enquiry from Studio CMH website">
+        
         <button type="submit" class="form-submit">Send Enquiry →</button>
       </form>
 
@@ -83,14 +85,5 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('form-success').style.display = 'block';
-      e.target.style.opacity = '0.3';
-      e.target.style.pointerEvents = 'none';
-    }
-  </script>
 </body>
 </html>
