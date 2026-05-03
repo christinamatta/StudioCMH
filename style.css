@@ -1132,3 +1132,22 @@ hr.section-divider {
   .work-header { padding: calc(var(--nav-height) + 3rem) 1.5rem 3rem; }
   .projects-list { padding: 0; }
 }
+
+/* === DESKTOP HOME GRID ALIGNMENT FIX === */
+@media (min-width: 1025px) {
+  .home-grid {
+    align-items: start;
+  }
+
+  .home-grid-item:nth-child(1) { height: 480px; }
+
+  .home-grid-item:nth-child(2) {
+    height: calc(480px + 240px + 1.5rem);
+  }
+
+  .home-grid-item:nth-child(3),
+  .home-grid-item:nth-child(4) {
+    height: 240px;
+  }
+}
+
